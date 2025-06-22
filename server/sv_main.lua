@@ -1,7 +1,7 @@
 local config = require 'config'
 
 
-lib.addCommand(config.giveitemcommand, {
+lib.addCommand(config.giveItemCommand, {
     help = 'Gives a item to a player with a specific rarity',
     params = {
         {
@@ -27,7 +27,7 @@ lib.addCommand(config.giveitemcommand, {
     },
     restricted = 'group.admin'
 }, function (source, args, raw)
-    local item = exports.ox_inventory:Items(args.weapon)
+    local item = exports.ox_inventory:Items(args.item)
 
     if not item then return end
 
